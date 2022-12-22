@@ -12,7 +12,7 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 public class DbUi {
-	private JTextField jtAdd;
+
 	private String data;
 
 	public DbUi() {
@@ -20,7 +20,7 @@ public class DbUi {
 		JFrame jf = new JFrame();
 		jf.setSize(300, 500);
 
-		jtAdd = new JTextField("입력");
+		JTextField jtAdd = new JTextField("입력");
 		JButton jbDbcreat = new JButton("데이타베이스 생성");
 		JButton jbDbdrop = new JButton("데이타베이스 삭제");
 		JButton jbTbcreat = new JButton("테이블 생성");
@@ -55,6 +55,16 @@ public class DbUi {
 		jbTbcreat.addActionListener(e -> {
 			data = jtAdd.getText();
 			new Tbcreat(data);
+		});
+		jbTbdelete.addActionListener(e -> {
+			data = jtAdd.getText();
+			new  Tbdelete(data);
+			
+		});
+		jbDbmanager.addActionListener(e ->{
+			data = jtAdd.getText();
+			new Dbmanager(data);
+			
 		});
 
 		jf.setVisible(true);
