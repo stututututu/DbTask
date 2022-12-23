@@ -7,8 +7,9 @@ import java.sql.Statement;
 public class Tbdelete {
 	
 	private String data;
+	private String dbName;
 	
-public Tbdelete(String data) {
+public Tbdelete(String data, String dbName) {
 	// TODO Auto-generated constructor stub
 	String url = "jdbc:mysql://localhost/?" + "CharacterEncoding=UTF-8&" + "serverTimezone=UTC&"
 			+ "allowPublicKeyRetrieval=true&" + "allowLoadLocalInfile=true&" + "allowMultiQueries=true";

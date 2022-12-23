@@ -23,7 +23,7 @@ public class Dbmanager {
 		 JPanel jpMain = new JPanel(new GridLayout(5, 5, 10, 10));
 		 jpMain.setBorder(new EmptyBorder(10, 10, 10, 10));
 		 
-		 JTextField jtAdd = new JTextField("입력");
+		 JTextField jtAdd = new JTextField();
 		 JButton jbDadd = new JButton("데이터 추가");
 		 JButton jbDdelete = new JButton("데이터 삭제");
 		 JButton jbDchange = new JButton("데이터 변경");

@@ -11,7 +11,6 @@ public class DbCreat {
 	public DbCreat(String data) {
 		// TODO Auto-generated constructor stub
 
-
 		String url = "jdbc:mysql://localhost/?" + "CharacterEncoding=UTF-8&" + "serverTimezone=UTC&"
 				+ "allowPublicKeyRetrieval=true&" + "allowLoadLocalInfile=true&" + "allowMultiQueries=true";
 
@@ -23,7 +22,7 @@ public class DbCreat {
 			System.out.println("connecting succeed");
 			Statement stmt = con.createStatement();
 
-			stmt.executeUpdate("CREATE SCHEMA IF NOT EXISTS `"+data+"` DEFAULT CHARACTER SET utf8 ;");
+			stmt.executeUpdate("CREATE SCHEMA IF NOT EXISTS `" + data + "` DEFAULT CHARACTER SET utf8 ;\r\n" + "");
 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -33,3 +32,4 @@ public class DbCreat {
 	}
 
 }
+

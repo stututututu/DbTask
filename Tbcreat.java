@@ -7,9 +7,10 @@ import java.sql.Statement;
 public class Tbcreat {
 	
 	private String data;
+	private String dbName;
 	
 	
-public Tbcreat(String data){
+public Tbcreat(String data, String dbName){
 
 	String url = "jdbc:mysql://localhost/?" + "CharacterEncoding=UTF-8&" + "serverTimezone=UTC&"
 			+ "allowPublicKeyRetrieval=true&" + "allowLoadLocalInfile=true&" + "allowMultiQueries=true";
@@ -20,7 +21,7 @@ public Tbcreat(String data){
 	try {
 		Connection con = DriverManager.getConnection(url, id, pw);
 		Statement stmt = con.createStatement();
-		stmt.executeUpdate("CREATE TABLE IF NOT EXISTS DbTask."+data);
+		stmt.executeUpdate("CREATE TABLE IF NOT EXISTS "+dbName+"."+dbName+"(\r\n");
 		System.out.println("Table Creat");
 		
 	} catch (Exception e) {
